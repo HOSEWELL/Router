@@ -5,23 +5,43 @@ import './index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './assets/components/Home.jsx';
-import Profile from './assets/components/Profile.jsx';
-import Settings from './assets/components/settings.jsx';
+import Home from './components/Home.jsx';
+import Profile from './components/Profile.jsx';
+import Settings from './components/settings.jsx';
+import Errorpage from './components/Errorpage.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element:<Home/>,
+    errorElement:<Errorpage/>
+  },
+  {
+    path:"/home",
     element:<Home/>
   },
   {
     path:"/profile",
+    element:<Profile/>,
+    children: [
+      {
+        path:"/profile/:profileId",
     element:<Profile/>
+      }
+    ]
+  },
+  {
+    
   },
   {
     path:"/settings",
     element:<Settings/>
-  }
+  },
+  {
+    path:"/settings/:settingsId",
+    element:<Settings/>
+  },
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

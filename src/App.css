@@ -1,1 +1,8 @@
-
+.nav-brand{
+    padding: 10px;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+  }
+  
