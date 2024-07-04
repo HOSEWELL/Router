@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Profile=()=>{
-    const profiles = ["Ian", "Clinton", "Amira", "Hosewell"]
+    const profiles = ["Hosewell","Ian", "Clinton", "Amira","Hellen","Pauline"]
     const params = useParams()
     console.log(params);
     return(

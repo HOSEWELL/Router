@@ -7,13 +7,13 @@ const NavBar = ()=>{
         <>
     <nav className="navbar bg-primary" data-bs-theme="dark">
         <div className="container-fluid">
-        <a className="navbar-brand">Pata Nyumba  🏚️
+        <a className="navbar-brand">Router 📶 🛜 
 </a>
      
         <form className="d-flex" role="search">
 
-        <Link to="/Profile" className="nav-brand">Profile</Link>
         <Link to="/Home" className="nav-brand">Home</Link>
+        <Link to="/Profile" className="nav-brand">Profile</Link>
         <Link to="/Settings" className="nav-brand">Settings</Link>
         
         <input
@@ -25,6 +25,7 @@ const NavBar = ()=>{
             <button className="btn btn-outline-success" type="submit" style={{color:'white',border:'1px solid'}}>
               Search
             </button>
+
          </form>
         </div>
     </nav>
